@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewData["Title"] = "GetBlogInfo";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+  
+        @using (Html.BeginForm("GetBlogInfo", "Blog", FormMethod.Post))
+        {
+            @Html.HiddenFor(x=>x.BlogID)
+            @Html.Label("Blog Başlık")
+            @Html.TextBoxFor(x=>x.BlogTitle,new{@class="form-control"})
+            <br />
+            @Html.Label("Blog İçerik")
+            @Html.TextAreaFor(x=>x.BlogContent,9,3,new{@class="form-control"})
+            <br />
+            @Html.Label("Blog Küçük Resim")
+            @Html.TextBoxFor(x=>x.BlogThumbnailImage,new{@class="form-control"})
+            <br />
+            @Html.Label("Blog Resim")
+            @Html.TextBoxFor(x=>x.BlogImage,new{@class="form-control"})
+            <br />
+            @Html.Label("Blog Tarih")
+            @Html.TextBoxFor(x=>x.BlogCreateDate,new{@class="form-control"})
+            <br />
+            @Html.Label("Kategori")
+            @Html.TextBoxFor(x=>x.CategoryID,new{@class="form-control"})
+            <br />
+            @Html.Label("Blog Yazar")
+            @Html.TextBoxFor(x=>x.WriterID,new{@class="form-control"})
+            <br />
+            @Html.Label("Durum")
+            @Html.TextBoxFor(x=>x.BlogStatus,new{@class="form-control"})
+            <br />
+            <button  class="btn btn-primary">Kaydet</button>
+        }
+
+
+
+
+  

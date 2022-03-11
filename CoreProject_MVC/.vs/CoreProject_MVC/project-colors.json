@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d46746a6-17b2-4f0b-b4aa-b865516a13f0": {
+      "ProjectGuid": "d46746a6-17b2-4f0b-b4aa-b865516a13f0",
+      "DisplayName": "CoreProject_MVC",
+      "ColorIndex": 0
+    },
+    "e6a1d10c-4801-4178-acc6-e40177b96db0": {
+      "ProjectGuid": "e6a1d10c-4801-4178-acc6-e40177b96db0",
+      "DisplayName": "BusinessLayer",
+      "ColorIndex": 1
+    },
+    "cac4e51e-984b-4ed1-a6d0-470fd5da3eec": {
+      "ProjectGuid": "cac4e51e-984b-4ed1-a6d0-470fd5da3eec",
+      "DisplayName": "DataAccessLayer",
+      "ColorIndex": 2
+    },
+    "b904ee54-b3fe-4423-a1b7-52db303001f4": {
+      "ProjectGuid": "b904ee54-b3fe-4423-a1b7-52db303001f4",
+      "DisplayName": "CoreLayer",
+      "ColorIndex": 3
+    },
+    "cafb2ff6-06a3-4a27-8ad1-ca37675532e2": {
+      "ProjectGuid": "cafb2ff6-06a3-4a27-8ad1-ca37675532e2",
+      "DisplayName": "EntityLayer",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Diğer Dosyalar",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

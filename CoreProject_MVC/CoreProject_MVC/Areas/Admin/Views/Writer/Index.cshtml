@@ -1,0 +1,49 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@model IPagedList<EntityLayer.Concrete.Writer>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+   <div class="row">
+       @foreach (var item in Model)
+      {    
+            <div class="col-lg-4">
+                <div class="contact-box">
+                    <a class="row" href="/Admin/Writer/AdminWriterProfilDetail/@item.WriterID">
+                    <div class="col-4">
+                        <div class="text-center">
+                            <img alt="image" class="rounded-circle m-t-xs img-fluid" src="~/admin/img/a2.jpg">
+                            <div class="m-t-xs font-bold">Ünvan</div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <h3><strong>@item.WriterName @item.WriterSurname</strong></h3>
+                        <p><i class="fa fa-envelope"></i> @item.WriterMail</p>
+                        <address>
+                            <strong>Hakkında</strong><br>
+                            @item.WriterAbout<br>
+                          
+                        </address>
+                        @if(item.WriterStatus==true){
+                            <p class="text-green">Aktif Yazar</p>
+                        }
+                        else
+                        {
+                             <p class="text-danger">Pasif Yazar</p>
+                        }
+
+                    </div>
+                        </a>
+                </div>
+            </div>
+           }                   
+        </div>      
+
+<a href="/Writer/WriterAdd/" class="btn btn-primary">Yazar Girişi Yap</a>
+
+<div style="float:right;">
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new{page}))
+</div>

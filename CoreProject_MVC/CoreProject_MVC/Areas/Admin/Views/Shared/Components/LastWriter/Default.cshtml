@@ -1,0 +1,19 @@
+﻿@using EntityLayer.Concrete
+@model List<Writer>
+@foreach (var item in Model)
+{
+   <div class="col-md-6">
+        <div class="ibox-content text-center">
+
+            <h3>@item.WriterName @item.WriterSurname</h3>
+            <div class="m-b-sm">
+                <img alt="image" class="rounded-circle" src="~/admin/img/a8.jpg">
+            </div>
+            <p class="font-bold">@item.WriterMail</p>
+
+            <div class="text-center">
+                <p>Son Eklenen Yazar</p>
+            </div>
+        </div>
+    </div>
+}

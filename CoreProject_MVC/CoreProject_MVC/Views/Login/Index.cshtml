@@ -1,0 +1,76 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giriş Yap </title>
+
+    <link href="~/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/admin/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/admin/css/animate.css" rel="stylesheet">
+    <link href="~/admin/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="loginColumns animated fadeInDown">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="font-bold">SRKY.net'e Hoşgeldiniz!</h2>
+
+                <p>
+                    Siz de giriş yaparak blog yazılarınızı yazabilirsiniz.
+                </p>
+
+                <p>
+                    Hemen giriş yapın ve bloglarınızı yazmaya başlayın.
+                </p>               
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="ibox-content">
+                    <form class="m-t" method="post">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="WriterMail" placeholder="Mail" >
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="WriterPassword" placeholder="Şifre" required="">
+                        </div>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Giriş Yap</button>
+
+                        <a href="#">
+                            <p>Şifreni mi unuttun?</p>
+                        </a>
+
+                        <p class="text-muted text-center">
+                         <small>Bir hesabın yok mu?</small>
+                        </p>
+                        <a class="btn btn-sm btn-white btn-block" href="/Register/Index">Hesap Oluştur</a>
+                        <h2 class="text-danger">@ViewBag.mesaj</h2>
+                    </form>                   
+                </div>
+            </div>
+        </div>
+        <hr />
+    </div>
+</body>
+</html>
+@* 
+                 <div class="row">
+                    <img style="margin-right:100px;" src="https://demo.w3layouts.com/demos_new/template_demo/03-10-2020/working-signin-demo_Free/191926092/web/images/2.png" />
+                </div>
+*@

@@ -1,0 +1,24 @@
+﻿@using EntityLayer.Concrete
+@*@model List<Message>*@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+<@*table class="table table-bordered">
+    <tr>
+        <th>Gönderen</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var item in Model)
+    {                
+        <tr>
+            <td><a>@item.Sender</a></td>
+            <td>@item.Subject</td>
+            <td>@(((DateTime)item.MessageDate).ToString("dd-MMM-yyy"))</td>                       
+        </tr>
+      
+    }
+
+</table>*@

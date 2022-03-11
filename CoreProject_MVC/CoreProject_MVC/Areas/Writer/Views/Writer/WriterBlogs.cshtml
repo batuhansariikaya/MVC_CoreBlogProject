@@ -1,0 +1,72 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+@{
+    ViewData["Title"] = "WriterBlogs";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Blog</th>
+        <th>Kategori</th>
+        <th>Durum</th>
+        <th>Tarih</th>
+        <th>Yorum Sayısı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th><a  href="/Blog/BlogDetail/@item.BlogID">@item.BlogID</a></th>
+            <td>@item.BlogTitle</td>
+            <td>@item.Category.CategoryName</td>
+            <td>
+            @if (item.BlogStatus)
+            {
+                <span class="badge badge-success">Aktif</span>
+            }
+            else
+            {   
+                <span class="badge badge-secondary">Pasif</span>
+            }
+            </td>
+           
+            <td>@(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))</td>
+            <td>0</td>
+            <td><a class="btn btn-primary"  href="/Writer/Writer/BlogDelete/@item.BlogID"   id="deleteButton" onclick="return confirm('Silmek İstediğinize Emin Misiniz?');">Sil</a></td>
+            <td><a class="btn btn-success" href="/Writer/Writer/BlogEdit/@item.BlogID/" >Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+@if(Model.Count==0){
+    <small class="text-center text-danger">Hiç blog yazmadınız</small>
+}
+else
+{
+    <small>Blog numaralarına tıklayarak istediğiniz bloga gidebilirsiniz.</small>
+}
+@*<script>
+    $('#btndelete').click(fun   ction(){
+    swal({
+  title: "Silmek İstediğinize Emin Misiniz?",
+  text: "Bu Blog Silinecektir!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Poof! Blog Silindi!", {
+      icon: "success",
+    });
+  } else {
+    swal("Blog Silinmedi!");
+  }
+});
+  
+</script>
+*@

@@ -1,0 +1,17 @@
+﻿<p>@ViewBag.commentıd</p>
+<div class="comment-top">
+    <h4>Yorum Yazın</h4>
+    <div class="comment-bottom">
+        @using (Html.BeginForm("AddComment","Comment",FormMethod.Post))
+        {
+            
+            <input class="form-control" type="text" name="CommentUsername" placeholder="Ad Soyad" required="">
+           @* <input class="form-control" type="email" name="Email" placeholder="Mail" required="">*@
+
+            <input class="form-control" type="text" name="CommentTitle" placeholder="Konu" required="">
+
+            <textarea class="form-control" name="CommentContent" placeholder="Mesaj" required=""></textarea>
+            <button type="submit" class="btn btn-primary submit">Gönder</button>
+     }
+    </div>
+</div>

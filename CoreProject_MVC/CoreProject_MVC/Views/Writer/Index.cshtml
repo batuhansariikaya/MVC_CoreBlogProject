@@ -1,0 +1,44 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+
+
+
+
+
+<table class="table table-bordered">
+    
+        <tr>
+            <th>#</th>
+            <th>Blog</th>
+            <th>Kategori</th>
+            <th>Durum</th>
+            <th>Yorum Sayısı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    
+    
+    
+        <tr>
+            @foreach (var item in Model)
+            {
+                <td >
+                  @item.BlogID
+                </td>
+                <td>@item.BlogTitle</td>
+                <td>
+                   kategori
+                </td>
+                <td> @item.BlogStatus </td>
+                <td> May 15, 2015 </td>
+            }
+        </tr>
+    
+    
+</table>
+
