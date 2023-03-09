@@ -1,4 +1,3 @@
 # MVC_CoreBlogProject
 
-
-güncellenmeye devam edecek.
+.Net Core ile geliştirilmiş blog sitesi projesi.
